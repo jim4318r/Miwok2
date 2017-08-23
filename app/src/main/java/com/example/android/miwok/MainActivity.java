@@ -20,6 +20,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -36,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
     private double finalTime = 0;
     private SeekBar seekbar;
     private Handler myHandler = new Handler();;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.v("MainActivity", "onResume");
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v("MainActivity", "onStart");
+    }
+
 
     public static int oneTimeOnly = 0;
     @Override
